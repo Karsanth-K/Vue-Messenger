@@ -91,7 +91,7 @@ const loginFunction = () => {
   height: 500px;
   margin: auto;
   margin-top: 50px;
-  background: rgba(45, 0, 28, 0.478);
+  background: #0000007a;
   border-radius: 10px;
   border: 2px solid #34343468;
   outline: 2px solid #343434;
@@ -155,7 +155,7 @@ const loginFunction = () => {
 .loginForm > button {
   width: 150px;
   background-color: #bcbcbc1a;
-  color: #0c0c0c;
+  color: #c0c0c0a0;
   font-size: large;
   cursor: pointer;
   border: 1px solid #000000;
@@ -180,15 +180,14 @@ const loginFunction = () => {
 }
 .loginOptions > img {
   width: 50px;
-  background-color: #f0f0f0;
-  filter: contrast(75%) brightness(70%);
+  background-color: #dfdfdf28;
   border-radius: 50%;
   box-shadow: 3px 3px 3px black;
   transition: all 500ms;
 }
 .loginOptions > img:hover {
   scale: 1.1;
-  filter: contrast(90%) brightness(90%);
+  background-color: #c0c0c0;
 }
 
 @media (max-width: 500px) {
@@ -226,7 +225,7 @@ const loginFunction = () => {
     top: 10%;
   }
   .loginForm > button {
-    width: 150px;
+    width: 100px;
     padding: 5px 10px 5px 10px;
     margin: auto;
     margin-bottom: 10px;

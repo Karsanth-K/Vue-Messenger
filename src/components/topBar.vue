@@ -11,7 +11,7 @@
 
 <style scoped>
 .topBar {
-  background-color: #1e0a1ba0;
+  background-color: #0f0f0f9f;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,9 +51,9 @@ a:hover {
 }
 
 @media (max-width: 500px) {
-  /* .topBar {
+  .topBar {
     background-color: transparent;
-  } */
+  }
   .title {
     font-size: x-large;
     color: #a0a0a0;
