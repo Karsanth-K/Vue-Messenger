@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background-image: url('../img/background.jpg');
+  background-size: 100vw 100vh;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  overflow: hidden;
+}
+#app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: scroll;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#app::-webkit-scrollbar {
+  display: none;
+}
+*::-webkit-scrollbar {
+  width: 0.75vh;
+  height: 0.75vh;
+  background-color: #0f0f0f;
+}
+*::-webkit-scrollbar-thumb {
+  color: red;
+  background-color: red;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.glitch-text {
+  background: linear-gradient(90deg, red, blue);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: txtGlitch 3s alternate linear infinite;
+}
+
+@media (max-width: 600px) {
+}
