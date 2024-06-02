@@ -11,11 +11,10 @@
 
 <style scoped>
 .topBar {
-  background-color: #0f0f0f9f;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2px;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
 }
 .title {
   font-size: xx-large;
@@ -27,7 +26,6 @@
   -webkit-background-clip: text;
 }
 .action {
-  margin-left: auto;
   cursor: pointer;
 }
 a {
@@ -52,7 +50,7 @@ a:hover {
 
 @media (max-width: 500px) {
   .topBar {
-    background-color: transparent;
+    padding: 5px 10px 5px 10px;
   }
   .title {
     font-size: x-large;

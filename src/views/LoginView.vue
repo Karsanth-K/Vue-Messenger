@@ -34,6 +34,9 @@
       <img src="../img/github.png" alt="img" />
     </div>
   </div>
+  <RouterLink to="/signup">
+    <p>Don't have an account? Register here!</p>
+  </RouterLink>
 </template>
 
 <script setup>
@@ -91,12 +94,13 @@ const loginFunction = () => {
   height: 500px;
   margin: auto;
   margin-top: 50px;
-  background: #0000007a;
+  background: #0000003e;
   border-radius: 10px;
-  border: 2px solid #34343468;
-  outline: 2px solid #343434;
+  border: 2px solid #28000067;
+  outline: 2px solid #280000;
   outline-offset: 1px;
   padding: 10px;
+  backdrop-filter: blur(15px);
 }
 .loginForm {
   display: flex;
@@ -112,7 +116,7 @@ const loginFunction = () => {
   width: fit-content;
   margin: 10px auto 25px auto;
   background: radial-gradient(#d7d7d7, #8f8f8f);
-  filter: drop-shadow(1px 1px 1px black);
+  filter: drop-shadow(3px 3px 1px black);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -138,14 +142,14 @@ const loginFunction = () => {
   border-radius: 10px;
   width: 275px;
   height: 30px;
-  outline: 2px solid #6a6a6a68;
-  border: 1px solid #000000;
+  border: none;
   outline-offset: 2px;
   outline: none;
   padding: 5px 10px;
   background: #26262693;
   color: #c0c0c0;
   text-shadow: 1px 1px 1px black;
+  box-shadow: 2px 2px 2px black;
 }
 .inputField > .focused {
   left: 10px;
@@ -154,11 +158,13 @@ const loginFunction = () => {
 }
 .loginForm > button {
   width: 150px;
-  background-color: #bcbcbc1a;
-  color: #c0c0c0a0;
+  background-color: #27272752;
+  color: #c0c0c0;
   font-size: large;
   cursor: pointer;
-  border: 1px solid #000000;
+  border: none;
+  box-shadow: 2px 2px 2px black;
+  filter: drop-shadow(2px 2px black);
   padding: 10px 15px 10px 15px;
   border-radius: 10px;
   margin: auto;
@@ -167,9 +173,8 @@ const loginFunction = () => {
   transition: all 500ms;
 }
 .loginForm > button:hover {
-  background-color: rgba(38, 38, 38, 0.285);
-  color: #c0c0c0;
-  scale: 1.1;
+  background-color: #26262690;
+  color: #f0f0f0;
 }
 .loginOptions {
   display: flex;
@@ -180,14 +185,19 @@ const loginFunction = () => {
 }
 .loginOptions > img {
   width: 50px;
-  background-color: #dfdfdf28;
+  background-color: #70707052;
+  filter: drop-shadow(3px 3px black);
   border-radius: 50%;
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 2px 2px 2px black;
   transition: all 500ms;
 }
 .loginOptions > img:hover {
   scale: 1.1;
-  background-color: #c0c0c0;
+  box-shadow: 4px 4px 4px black;
+}
+a > p {
+  margin: 20px auto;
+  width: fit-content;
 }
 
 @media (max-width: 500px) {
@@ -234,6 +244,7 @@ const loginFunction = () => {
     gap: 20px;
   }
   .loginOptions > img {
+    filter: drop-shadow(1px 1px black);
     width: 30px;
   }
 }
