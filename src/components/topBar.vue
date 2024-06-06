@@ -2,12 +2,16 @@
   <div class="topBar">
     <div class="title">Vue Messenger</div>
     <div class="action">
-      <router-link to="/login">LOGOUT</router-link>
+      <a v-if="userStore.user" @click.prevent="userStore.logout">LOGOUT</a>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useUserStore } from '@/stores/userStore'
+
+const userStore = useUserStore()
+</script>
 
 <style scoped>
 .topBar {
@@ -19,7 +23,7 @@
 .title {
   font-size: xx-large;
   font-weight: bold;
-  background: radial-gradient(#b1b1b1, #757575);
+  background: linear-gradient(10deg, #5b5b5b, #a3a3a3, #5b5b5b);
   filter: drop-shadow(2px 2px 2px black);
   color: transparent;
   background-clip: text;
@@ -31,12 +35,11 @@
 a {
   padding: 4px;
   font-size: 20px;
-  border: 1px solid;
   border-radius: 5px;
   text-decoration: none;
-  background-color: #51515170;
-  border-color: #e0e0e0;
+  background-color: #ff000070;
   color: #e0e0e0;
+  filter: drop-shadow(2px 2px black);
   transition: all 250ms;
 }
 a:visited {
@@ -44,7 +47,6 @@ a:visited {
 }
 a:hover {
   background-color: #e31b1b;
-  border-color: #e0e0e0;
   color: #e0e0e0;
 }
 
@@ -54,16 +56,13 @@ a:hover {
   }
   .title {
     font-size: x-large;
-    color: #a0a0a0;
-    filter: drop-shadow(1px 1px 1px #000000);
-    text-shadow: -1px -1px 1px #676767;
-    font-weight: 500;
+    filter: drop-shadow(2px 2px #000000);
+    font-weight: 700;
   }
   .action {
     font-size: medium;
   }
   a {
-    content: counter(increment);
     font-weight: 600;
     font-size: large;
     padding: 1px;
